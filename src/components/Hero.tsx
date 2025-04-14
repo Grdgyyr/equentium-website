@@ -10,31 +10,27 @@ export const Hero = () => {
             href="#"
             className="inline-flex gap-3  border py-1 px-2 rounded-lg border-white/30"
           >
-            <span className="bg-[linear-gradient(to_right,#F87AFF,#FB93D0,#FFDD99,#C3F0B2,#2FDBFE)] text-transparent bg-clip-text [-webkit-background-clip:text]">
-              Version 2.0 is here
-            </span>
-            <span className="inline-flex items-center gap-1">
-              <span>Read More</span>
-              <ArrowWIcon />
-            </span>
+            <span className="bg-color-white">Version 2.0 is here</span>
+            <ArrowWIcon />
           </a>
         </div>
         <div className="flex justify-center">
-          <h1 className="text-7xl sm:text-9xl font-bold tracking-tighter text-center mt-8 inline-flex">
-            One Task
-            <br />
-            at a time
+          <h1 className="text-7xl sm:text-7xl font-bold tracking-tighter text-center mt-8 inline-flex">
+            The API Security Framework
           </h1>
         </div>
         <div className="flex justify-center">
           <p className="text-center text-xl mt-8 max-w-md">
-            Celebrate the joy of accomplishment with an app design to track your
-            progres, motivate your efforts, and celebrate your success.
+            Our landing page template works on all devices, so you only have to
+            set it up once, and get beautiful results forever.
           </p>
         </div>
-        <div className="flex justify-center mt-8">
-          <button className="bg-white text-black py-3 px-5 rounded-lg font-medium">
+        <div className="flex justify-center gap-4 mt-8">
+          <button className="bg-white text-black py-3 px-5 rounded-full font-medium">
             Get for free
+          </button>
+          <button className="bg-transparent border border-white text-white py-3 px-5 rounded-full font-medium hover:bg-white hover:text-black transition">
+            Read the docs
           </button>
         </div>
       </div>
