@@ -23,7 +23,7 @@ export const ProductShowcase = () => {
             progress, motivate your efforts and celebrate your success, one task at a time.
           </p>
         </div>
-        <div className="flex justify-center items-center mt-14"> {/* Centering container */}
+        <div className="flex justify-center items-center mt-14">
           <motion.div
             style={{
               opacity: opacity,
@@ -34,7 +34,7 @@ export const ProductShowcase = () => {
             <Image
               src={appScreen}
               alt="The Product Screenshot"
-              className="block" // Ensure the image behaves as a block element
+              className="block"
               ref={appImage}
             />
           </motion.div>
