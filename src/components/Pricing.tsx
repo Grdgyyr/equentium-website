@@ -1,12 +1,10 @@
-'use client';
+"use client";
 
 import React, { useState } from "react";
 
 export const Pricing = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
-
-  
   const testimonials = [
     {
       name: "Jessie J",
@@ -14,9 +12,23 @@ export const Pricing = () => {
       quote:
         "As a busy professional, I don't have a lot of time to devote to working out. But with this fitness program, I have seen amazing results in just a few short weeks.",
       svg: (
-        <svg className="w-20 h-20 rounded-full" viewBox="0 0 100 100" fill="none">
+        <svg
+          className="w-20 h-20 rounded-full"
+          viewBox="0 0 100 100"
+          fill="none"
+        >
           <circle cx="50" cy="50" r="50" fill="#6C3EF6" />
-          <text x="50%" y="55%" dominantBaseline="middle" textAnchor="middle" fill="white" fontSize="35px" fontFamily="Arial">J</text>
+          <text
+            x="50%"
+            y="55%"
+            dominantBaseline="middle"
+            textAnchor="middle"
+            fill="white"
+            fontSize="35px"
+            fontFamily="Arial"
+          >
+            J
+          </text>
         </svg>
       ),
     },
@@ -26,9 +38,23 @@ export const Pricing = () => {
       quote:
         "This program helped me stay consistent even with a hectic travel schedule. I feel stronger and more energized than ever before.",
       svg: (
-        <svg className="w-20 h-20 rounded-full" viewBox="0 0 100 100" fill="none">
+        <svg
+          className="w-20 h-20 rounded-full"
+          viewBox="0 0 100 100"
+          fill="none"
+        >
           <circle cx="50" cy="50" r="50" fill="#A278FA" />
-          <text x="50%" y="55%" dominantBaseline="middle" textAnchor="middle" fill="white" fontSize="35px" fontFamily="Arial">M</text>
+          <text
+            x="50%"
+            y="55%"
+            dominantBaseline="middle"
+            textAnchor="middle"
+            fill="white"
+            fontSize="35px"
+            fontFamily="Arial"
+          >
+            M
+          </text>
         </svg>
       ),
     },
@@ -38,26 +64,41 @@ export const Pricing = () => {
       quote:
         "The user experience and workouts are so well designed, I genuinely look forward to my daily sessions. Highly recommend!",
       svg: (
-        <svg className="w-20 h-20 rounded-full" viewBox="0 0 100 100" fill="none">
+        <svg
+          className="w-20 h-20 rounded-full"
+          viewBox="0 0 100 100"
+          fill="none"
+        >
           <circle cx="50" cy="50" r="50" fill="#FF7AC0" />
-          <text x="50%" y="55%" dominantBaseline="middle" textAnchor="middle" fill="white" fontSize="35px" fontFamily="Arial">K</text>
+          <text
+            x="50%"
+            y="55%"
+            dominantBaseline="middle"
+            textAnchor="middle"
+            fill="white"
+            fontSize="35px"
+            fontFamily="Arial"
+          >
+            K
+          </text>
         </svg>
       ),
     },
   ];
-  
 
   const active = testimonials[activeIndex];
 
   return (
     <div className="min-h-screen bg-[#0A0E27] text-white py-12 px-4 sm:px-6 lg:px-8 font-sans">
       <div className="max-w-7xl mx-auto">
-
         {/* --- Pricing Section --- */}
-        <h2 className="text-center text-2xl sm:text-3xl font-bold mb-2">Flexible plans and features</h2>
+        <h2 className="text-center text-2xl sm:text-3xl font-bold mb-2">
+          Flexible plans and features
+        </h2>
         <p className="text-center text-gray-400 mb-10 sm:mb-12 max-w-xl mx-auto text-sm">
-          All the lorem ipsum generators on the Internet tend to repeat predefined chunks as necessary,
-          making this the first true generator on the Internet.
+          All the lorem ipsum generators on the Internet tend to repeat
+          predefined chunks as necessary, making this the first true generator
+          on the Internet.
         </p>
 
         <div className="flex items-center justify-center gap-4 text-sm text-gray-400 mb-6 flex-wrap">
@@ -70,8 +111,8 @@ export const Pricing = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-          <div className="text-sm text-gray-300 space-y-6">
-            <div>
+          <div className="text-sm text-gray-300 space-y-6 border-r border-white/20 pr-6">
+            <div className="border-b border-white/10 pb-4">
               <p className="text-white font-semibold mb-2">Usage</p>
               <ul className="space-y-2">
                 <li>Social Connections</li>
@@ -80,7 +121,7 @@ export const Pricing = () => {
                 <li>External Databases</li>
               </ul>
             </div>
-            <div>
+            <div className="border-b border-white/10 pb-4">
               <p className="text-white font-semibold mb-2">Features</p>
               <ul className="space-y-2">
                 <li>Custom Connection</li>
@@ -110,14 +151,37 @@ export const Pricing = () => {
             {
               title: "Team",
               price: "$49",
-              features: ["250", "Unlimited", "Unlimited", "5", "✓", "✓", "✓", "✓", "✓"],
-              style: "bg-gradient-to-b from-[#6C3EF6] to-[#1A1E42] border border-[#A278FA]",
+              features: [
+                "250",
+                "Unlimited",
+                "Unlimited",
+                "5",
+                "✓",
+                "✓",
+                "✓",
+                "✓",
+                "✓",
+              ],
+              style:
+                "bg-gradient-to-b from-[#6C3EF6] to-[#1A1E42] border border-[#A278FA]",
               button: "bg-[#A678FA] text-white hover:bg-[#8a58f4]",
             },
             {
               title: "Enterprise",
               price: "$79",
-              features: ["Unlimited", "Unlimited", "Unlimited", "Unlimited", "✓", "✓", "✓", "✓", "✓", "✓", "✓"],
+              features: [
+                "Unlimited",
+                "Unlimited",
+                "Unlimited",
+                "Unlimited",
+                "✓",
+                "✓",
+                "✓",
+                "✓",
+                "✓",
+                "✓",
+                "✓",
+              ],
               style: "bg-[#11152D]",
               button: "bg-white text-[#6C3EF6] hover:bg-purple-100",
             },
@@ -127,11 +191,16 @@ export const Pricing = () => {
               className={`${plan.style} p-6 rounded-2xl shadow-md flex flex-col justify-between`}
             >
               <div>
-                <h3 className="text-[#A278FA] font-medium text-sm mb-1">{plan.title}</h3>
+                <h3 className="text-[#A278FA] font-medium text-sm mb-1">
+                  {plan.title}
+                </h3>
                 <div className="text-white text-3xl font-bold">
-                  {plan.price}<span className="text-gray-400 text-sm font-normal">/mo</span>
+                  {plan.price}
+                  <span className="text-gray-400 text-sm font-normal">/mo</span>
                 </div>
-                <p className="text-gray-400 text-sm mt-1 mb-4">Everything at your fingertips.</p>
+                <p className="text-gray-400 text-sm mt-1 mb-4">
+                  Everything at your fingertips.
+                </p>
                 <button
                   className={`w-full ${plan.button} py-2 rounded-full font-semibold text-sm transition`}
                 >
@@ -141,7 +210,8 @@ export const Pricing = () => {
                 <ul className="text-sm mt-6 space-y-2 text-gray-300">
                   {plan.features.map((feature, i) => (
                     <li key={i} className="flex items-center gap-2">
-                      <span className="text-[#A278FA]">✓</span> {feature.includes("✓") ? "" : feature}
+                      <span className="text-[#A278FA]">✓</span>{" "}
+                      {feature.includes("✓") ? "" : feature}
                     </li>
                   ))}
                 </ul>
