@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link"; // ✅ Add this import
 import Image from "next/image";
 import logoImage from "../assets/images/logo1.png";
 import MenuIcon from "../assets/icons/menu.svg";
@@ -17,20 +18,20 @@ export const Navbar = () => {
         <div className="flex items-center justify-between h-16 relative">
           {/* Logo */}
           <div className="flex-shrink-0 z-20">
-            <a href="/" className="flex items-center space-x-2">
+            <Link href="/" className="flex items-center space-x-2">
               <Image src={logoImage} alt="Logo" width={38} height={38} />
-            </a>
+            </Link>
           </div>
 
           {/* Centered auth buttons (mobile only) */}
           <div className="absolute left-1/2 transform -translate-x-1/2 flex items-center space-x-2 z-10 md:hidden">
-            <a
+            <Link
               href="#"
               className="text-white/80 hover:text-white transition text-sm font-medium"
             >
               Sign in
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="px-4 py-2 border border-white/40 text-white/90 rounded-full text-sm font-semibold backdrop-blur-sm transition hover:border-white hover:text-white shadow-[0_0_6px_rgba(255,255,255,0.4)] hover:shadow-[0_0_10px_rgba(255,255,255,0.6)]"
             >
@@ -38,14 +39,14 @@ export const Navbar = () => {
               <span className="ml-1 text-[#a855f7] font-medium tracking-normal transition hover:drop-shadow-[0_0_4px_rgba(168,85,247,0.6)]">
                 →
               </span>
-            </a>
+            </Link>
           </div>
 
           {/* Menu toggle */}
           <div className="md:hidden z-20">
             <button onClick={toggleMenu} aria-label="Toggle Menu">
               {menuOpen ? (
-                <MenuIcon className="w-6 h-6 text-white" />
+                <CloseIcon className="w-6 h-6 text-white" />
               ) : (
                 <MenuIcon className="w-6 h-6 text-white" />
               )}
@@ -54,28 +55,32 @@ export const Navbar = () => {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 space-x-6 items-center">
-            {["About", "Integrations", "Pricing", "Customers", "Changelog"].map(
-              (item) => (
-                <a
-                  key={item}
-                  href="#"
-                  className="text-white/60 hover:text-white transition"
-                >
-                  {item}
-                </a>
-              )
-            )}
+            <Link
+              href="/about"
+              className="text-white/60 hover:text-white transition"
+            >
+              About
+            </Link>
+            {["Integrations", "Pricing", "Customers", "Changelog"].map((item) => (
+              <Link
+                key={item}
+                href="#"
+                className="text-white/60 hover:text-white transition"
+              >
+                {item}
+              </Link>
+            ))}
           </nav>
 
           {/* Desktop Auth Buttons */}
           <div className="hidden md:flex space-x-3 items-center">
-            <a
+            <Link
               href="#"
               className="text-white/60 hover:text-white transition font-medium"
             >
               Sign in
-            </a>
-            <a
+            </Link>
+            <Link
               href="#"
               className="px-4 py-2 border border-white/40 text-white/90 rounded-full text-sm font-semibold backdrop-blur-sm transition hover:border-white hover:text-white shadow-[0_0_6px_rgba(255,255,255,0.4)] hover:shadow-[0_0_10px_rgba(255,255,255,0.6)]"
             >
@@ -83,29 +88,36 @@ export const Navbar = () => {
               <span className="ml-1 text-[#a855f7] font-medium tracking-normal transition hover:drop-shadow-[0_0_4px_rgba(168,85,247,0.6)]">
                 →
               </span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
 
       {/* Mobile menu dropdown */}
       {menuOpen && (
-  <div className="md:hidden bg-black/80 backdrop-blur-lg rounded-xl shadow-xl px-6 py-4 mt-2 mx-4 z-20 overflow-hidden border border-white/20 shadow-[0_0_12px_rgba(255,255,255,0.15)]">
-    <ul className="space-y-3 py-2 px-4">
-      {["About", "Integrations", "Pricing", "Customers", "Changelog"].map((item) => (
-        <li key={item}>
-          <a
-            href="#"
-            className="block text-slate-300 hover:text-white font-medium py-1 transition"
-          >
-            {item}
-          </a>
-        </li>
-      ))}
-    </ul>
-  </div>
-)}
-
+        <div className="md:hidden bg-black/80 backdrop-blur-lg rounded-xl shadow-xl px-6 py-4 mt-2 mx-4 z-20 overflow-hidden border border-white/20 shadow-[0_0_12px_rgba(255,255,255,0.15)]">
+          <ul className="space-y-3 py-2 px-4">
+            <li>
+              <Link
+                href="/about"
+                className="block text-slate-300 hover:text-white font-medium py-1 transition"
+              >
+                About
+              </Link>
+            </li>
+            {["Integrations", "Pricing", "Customers", "Changelog"].map((item) => (
+              <li key={item}>
+                <Link
+                  href="#"
+                  className="block text-slate-300 hover:text-white font-medium py-1 transition"
+                >
+                  {item}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </header>
   );
 };
