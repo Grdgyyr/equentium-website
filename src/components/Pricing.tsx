@@ -89,7 +89,7 @@ export const Pricing = () => {
   const active = testimonials[activeIndex];
 
   return (
-    <div className="min-h-screen bg-[#0A0E27] text-white py-12 px-4 sm:px-6 lg:px-8 font-sans">
+    <div className="min-h-screen bg-gradient-to-b from-black to-[#5D2CA8] text-white py-12 px-4 sm:px-6 lg:px-8 font-sans">
       <div className="max-w-7xl mx-auto">
         {/* --- Pricing Section --- */}
         <h2 className="text-center text-2xl sm:text-3xl font-bold mb-2">
